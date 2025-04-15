@@ -1,0 +1,12 @@
+[window]
+padding = { x = 10, y = 10 }
+opacity = 0.8
+blur = true
+
+[cursor]
+style = { shape = "Block", blinking = "Always" }
+blink_interval = 250
+blink_timeout = 0
+
+[font]
+size = 9.5
