@@ -1,6 +1,6 @@
 [window]
 padding = { x = 10, y = 10 }
-opacity = 0.8
+opacity = 0.9
 blur = true
 
 [cursor]
@@ -9,4 +9,4 @@ blink_interval = 250
 blink_timeout = 0
 
 [font]
-size = 9.5
+size = 9
