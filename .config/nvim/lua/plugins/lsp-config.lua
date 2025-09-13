@@ -28,7 +28,12 @@ return {
       lspconfig.lua_ls.setup({})
       lspconfig.ts_ls.setup({})
       lspconfig.ruby_lsp.setup({})
-      lspconfig.clangd.setup({})
+      lspconfig.clangd.setup({
+        cmd = { 'clangd', '--background-index', '--clang-tidy', '--log=verbose'},
+        init_options = {
+          fallbackFlags = { '-std=c++17' },
+        },
+      })
       lspconfig.html.setup({})
       lspconfig.rust_analyzer.setup({})
       lspconfig.wgsl_analyzer.setup({})
