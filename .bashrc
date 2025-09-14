@@ -57,25 +57,39 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[0;31m\]\n--> \[\033[0;37m\]'
-    # orange=$(tput setaf 172);
-    # green_30=$(tput setaf 30);
-    # cyan=$(tput setaf 39);
-    # white=$(tput setaf 255);
-    # bold=$(tput setaf bold);
-    # reset=$(tput setaf sgr0); # Turn off all attributes
-    # 
-    # PS1="\[${bold}\]\n";
-    # PS1+="\[${white}\][ ";
-    # PS1+="\[${cyan}\]\t"; 
-    # PS1+="\[${white}\] ]";
-    # PS1+="\[${white}\] { ";
-    # PS1+="\[${cyan}\]\w";
-    # PS1+="\[${white}\] }";
-    # PS1+="\n";
-    # PS1+="\[${white}\] -> "
-    # PS1+="\[${white}\]"
-    # export PS1;
+    # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[0;31m\]\n--> \[\033[0;37m\]'
+
+    # Colors
+    white='\[\e[37m\]'
+    cyan='\[\e[36m\]'
+    bold='\[\e[1m\]'
+    reset='\[\e[0m\]'
+    
+    # Git branch function
+    get_git_branch() {
+      if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+        git branch 2>/dev/null | sed -n -e 's/^\* \(.*\)/ (\1)/p'
+      fi
+    }
+    
+    # Update prompt
+    update_prompt() {
+      PS1="${white}["
+      PS1+="${cyan}\t"                 # %t (time) → \t
+      PS1+="${white}] "
+      PS1+="${white}= "
+      PS1+="${white}{ "
+      PS1+="${cyan}\w "                # %~ (dir) → \w
+      PS1+="${white}}"
+      PS1+="${cyan}\$(get_git_branch)" # command substitution
+      PS1+=$'\n'
+      PS1+="${white} -> "
+      PS1+="${reset}"
+    }
+    
+    # Run update_prompt before each command
+    PROMPT_COMMAND=update_prompt
+ 
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
