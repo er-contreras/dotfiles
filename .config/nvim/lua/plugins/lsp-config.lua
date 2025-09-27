@@ -14,7 +14,7 @@ return {
           "ts_ls",
           "ruby_lsp",
           "html",
-          -- "clangd",
+          "clangd",
           "rust_analyzer",
           "wgsl_analyzer"
         },
