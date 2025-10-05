@@ -81,7 +81,7 @@ if [ "$color_prompt" = yes ]; then
       PS1+="${white}{ "
       PS1+="${cyan}\w "                # %~ (dir) → \w
       PS1+="${white}}"
-      PS1+="${cyan}\$(get_git_branch)" # command substitution
+      PS1+="${white}\$(get_git_branch)" # command substitution
       PS1+=$'\n'
       PS1+="${white} -> "
       PS1+="${reset}"
@@ -121,7 +121,7 @@ fi
 
 # some more ls aliases
 alias ll='ls -l'
-alias la='ls -lA'
+alias la='ls -la'
 alias l='ls -CF'
 alias ssp='systemctl suspend'
 alias srb='systemctl reboot'
