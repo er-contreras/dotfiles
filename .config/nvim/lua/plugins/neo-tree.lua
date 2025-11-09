@@ -12,7 +12,7 @@ return {
 
     require("neo-tree").setup({
       window = {
-        width = 30,
+        width = 40,
         mappings = {
           ["P"] = { "toggle_preview", config = { use_float = false, use_image_nvim = true } },
         },

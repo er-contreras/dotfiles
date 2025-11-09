@@ -68,7 +68,7 @@ if [ "$color_prompt" = yes ]; then
 \[\033[01;32m\]\u@\h\[\033[00m\]:\
 \[\033[01;34m\]\w\[\033[00m\]\
 \[\033[01;32m\]$(get_git_branch)\
-\[\033[0;31m\]\n--> \
+\[\033[0;37m\]\n ··> \
 \[\033[0;37m\]'
 
 else
@@ -102,14 +102,12 @@ fi
 
 # some more ls aliases
 alias ll='ls -l'
-alias la='ls -la'
+alias la='ls -lA'
 alias l='ls -CF'
 alias ssp='systemctl suspend'
 alias srb='systemctl reboot'
 alias spo='systemctl poweroff'
-alias chuser='sudo find . -user root -exec sudo chown $USER: {} +'
 alias src='source ~/.bashrc' 
-alias n='nvim'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
