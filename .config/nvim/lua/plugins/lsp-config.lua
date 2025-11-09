@@ -22,26 +22,17 @@ return {
     end,
   },
 
-  -- Setup the communication between Neovim and lenguage servers
   {
     "neovim/nvim-lspconfig",
     config = function()
-      -- local lspconfig = require('lspconfig')
 
       vim.lsp.enable("lua_ls")
       vim.lsp.enable("ruby_lsp")
-      -- lspconfig.lua_ls.setup({})
-      -- lspconfig.ts_ls.setup({})
-      -- lspconfig.ruby_lsp.setup({})
-      -- lspconfig.clangd.setup({
-      --   cmd = { 'clangd', '--background-index', '--clang-tidy', '--log=verbose'},
-      --   init_options = {
-      --     fallbackFlags = { '-std=c89', '-std=c++17' },
-      --   },
-      -- })
-      -- lspconfig.html.setup({})
-      -- lspconfig.rust_analyzer.setup({})
-      -- lspconfig.wgsl_analyzer.setup({})
+      vim.lsp.enable("ts_ls")
+      vim.lsp.enable("clangd")
+      vim.lsp.enable("html")
+      vim.lsp.enable("rust_analyzer")
+      vim.lsp.enable("wgsl_analyzer")
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
