@@ -29,17 +29,26 @@ return {
   --   vim.cmd.colorscheme('everforest')
   -- end
 
-  "projekt0n/github-nvim-theme",
+  -- "projekt0n/github-nvim-theme",
+  -- lazy = false,
+  -- priority = 1000,
+  -- config = function()
+  --   require("github-theme").setup({
+  --     options = {
+  --       transparent = true,
+  --     }
+  --   })
+
+  --   vim.cmd('colorscheme github_dark')
+  -- end,
+  --
+  "nickkadutskyi/jb.nvim",
   lazy = false,
   priority = 1000,
+  opts = {},
   config = function()
-    require("github-theme").setup({
-      options = {
-        transparent = true,
-      }
-    })
-
-    vim.cmd('colorscheme github_dark')
+    -- require("jb").setup({transparent = true})
+    vim.cmd("colorscheme jb")
   end,
 
   -- "mcchrish/zenbones.nvim",
