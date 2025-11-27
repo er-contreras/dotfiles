@@ -1,6 +1,12 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+#
+# Uncomment to see ansi colors code
+# for i in {0..255}; do
+#     printf "\e[38;5;%sm%3s\e[0m " "$i" "$i"
+#     if (( (i + 1) % 16 == 0 )); then echo; fi
+# done
 
 # If not running interactively, don't do anything
 case $- in
@@ -64,12 +70,31 @@ if [ "$color_prompt" = yes ]; then
     fi
   }
 
-  PS1='${debian_chroot:+($debian_chroot)}\
-\[\033[01;32m\]\u@\h\[\033[00m\] ⚙️ \
-\[\033[01;34m\]\w\[\033[00m\]\
-\[\033[01;32m\]$(get_git_branch)\
-\[\033[0;37m\]\n ··> \
-\[\033[0;37m\]'
+#   PS1='${debian_chroot:+($debian_chroot)}\
+# \[\033[01;166m\]\u@\h\[\033[00m\] ⚙️ \
+# \[\033[01;34m\]\w\[\033[00m\]\
+# \[\033[01;32m\]$(get_git_branch)\
+# \[\033[0;37m\]\n ··> \
+# \[\033[0;37m\]'orange=$(tput setaf 166);
+
+blue=$(tput setaf 23);
+red=$(tput setaf 124);
+green=$(tput setaf 71);
+white=$(tput setaf 15);
+purple=$(tput setaf 62);
+bold=$(tput setaf bold);
+reset=$(tput setaf sgr0); # Turn off all attributes
+
+#PS1="\[${bold}\\]\n";
+PS1="\[${blue}\]\u"; # username
+PS1+="\[${white}\] at ";
+PS1+="\[${red}\]\h"; # host
+PS1+="\[${white}\] ⚙️ ";
+PS1+="\[${green}\]\w"; # working directory
+PS1+="\[${purple}\]\$(get_git_branch)";
+PS1+="\n";
+PS1+="\[${white}\] ··> "
+export PS1;
 
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
