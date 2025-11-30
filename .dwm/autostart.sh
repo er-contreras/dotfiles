@@ -4,4 +4,3 @@
 exec slstatus &
 nitrogen --restore &
 exec compton &
-exec setxkbmap us intl &
