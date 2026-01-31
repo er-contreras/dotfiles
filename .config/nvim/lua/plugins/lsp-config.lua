@@ -16,7 +16,8 @@ return {
           "html",
           "clangd",
           "rust_analyzer",
-          "wgsl_analyzer"
+          "wgsl_analyzer",
+          "pyright"
         },
       })
     end,
@@ -30,6 +31,7 @@ return {
       vim.lsp.enable("ts_ls")
       vim.lsp.enable("clangd")
       vim.lsp.enable("html")
+      vim.lsp.enable("pyright")
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})

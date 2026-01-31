@@ -70,13 +70,6 @@ if [ "$color_prompt" = yes ]; then
     fi
   }
 
-#   PS1='${debian_chroot:+($debian_chroot)}\
-# \[\033[01;166m\]\u@\h\[\033[00m\] ⚙️ \
-# \[\033[01;34m\]\w\[\033[00m\]\
-# \[\033[01;32m\]$(get_git_branch)\
-# \[\033[0;37m\]\n ··> \
-# \[\033[0;37m\]'orange=$(tput setaf 166);
-
 blue=$(tput setaf 23);
 red=$(tput setaf 124);
 green=$(tput setaf 71);
@@ -85,15 +78,15 @@ purple=$(tput setaf 62);
 bold=$(tput setaf bold);
 reset=$(tput setaf sgr0); # Turn off all attributes
 
-#PS1="\[${bold}\\]\n";
-PS1="\[${blue}\]\u"; # username
+PS1="\[${bold}\]";
+PS1+="\[${blue}\]\u"; # username
 PS1+="\[${white}\] at ";
 PS1+="\[${red}\]\h"; # host
 PS1+="\[${white}\] ⚙️ ";
 PS1+="\[${green}\]\w"; # working directory
 PS1+="\[${purple}\]\$(get_git_branch)";
 PS1+="\n";
-PS1+="\[${white}\] ··> "
+PS1+="\[${white}\] ··> ";
 export PS1;
 
 else
@@ -164,3 +157,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # Added by `rbenv init` on Sat Mar 22 04:40:38 PM CST 2025
 eval "$(~/.rbenv/bin/rbenv init - --no-rehash bash)"
+. "$HOME/.cargo/env"

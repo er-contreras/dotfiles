@@ -1,3 +1,4 @@
+vim.opt.clipboard:append("unnamedplus")
 vim.cmd("syntax off")
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
