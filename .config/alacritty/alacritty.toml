@@ -1,7 +1,11 @@
+[general]
+live_config_reload = true
+
 [window]
 padding = { x = 10, y = 10 }
-opacity = 1
+opacity = 0.95
 blur = true
+title = "Alacritty"
 
 [cursor]
 style = { shape = "Block", blinking = "Always" }
@@ -9,4 +13,21 @@ blink_interval = 250
 blink_timeout = 0
 
 [font]
-size = 9
+size = 8
+
+[colors.primary]
+background = '#1a1b26'
+#foreground = '#a9b1d6'
+
+[colors.normal]
+#black =   '#32344a'
+#red =     '#f7768e'
+#green =   '#9ece6a'
+#yellow =  '#e0af68'
+#blue =    '#7aa2f7'
+#magenta = '#ad8ee6'
+#cyan =    '#449dab'
+#white =   '#787c99'
+
+[terminal]
+shell = { program = "/bin/bash", args = ["-l"] }
