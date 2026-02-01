@@ -2,10 +2,13 @@
 live_config_reload = true
 
 [window]
-padding = { x = 10, y = 10 }
+padding = { x = 2, y = 2 }
 opacity = 0.95
 blur = true
 title = "Alacritty"
+
+[env]
+#TERM = "xterm-256color"
 
 [cursor]
 style = { shape = "Block", blinking = "Always" }
@@ -30,4 +33,4 @@ background = '#1a1b26'
 #white =   '#787c99'
 
 [terminal]
-shell = { program = "/bin/bash", args = ["-l"] }
+#shell = { program = "/bin/bash", args = ["-l"] }
