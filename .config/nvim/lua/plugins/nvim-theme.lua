@@ -7,17 +7,17 @@ return {
   --   vim.cmd.colorscheme "catppuccin"
   -- end
 
-  --  'AlexvZyl/nordic.nvim',
-  --  lazy = false,
-  --  priority = 1000,
-  --  config = function()
-  --    require('nordic').load({
-  --      transparent = {
-  --        bg = true,
-  --        float = true
-  --      },
-  --    })
-  --  end
+  -- 'AlexvZyl/nordic.nvim',
+  -- lazy = false,
+  -- priority = 1000,
+  -- config = function()
+  --   require('nordic').load({
+  --     transparent = {
+  --       bg = true,
+  --       float = true
+  --     },
+  --   })
+  -- end
 
   -- 'sainnhe/everforest',
   -- lazy = false,
@@ -42,14 +42,14 @@ return {
   --   vim.cmd('colorscheme github_dark')
   -- end,
 
-  -- "nickkadutskyi/jb.nvim",
-  -- lazy = false,
-  -- priority = 1000,
-  -- opts = {},
-  -- config = function()
-  --   -- require("jb").setup({transparent = true})
-  --   vim.cmd("colorscheme jb")
-  -- end,
+  "nickkadutskyi/jb.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = {},
+  config = function()
+    require("jb").setup({transparent = true})
+    vim.cmd("colorscheme jb")
+  end,
 
   -- "mcchrish/zenbones.nvim",
   -- lazy = false,
@@ -57,6 +57,7 @@ return {
   -- config = function()
   --   vim.o.background = "dark"
   --   vim.g.zenbones_compat = true
+  --   vim.g.zenbones_transparent_background = true
   --   vim.cmd('colorscheme zenbones')
   -- end
 }

@@ -158,4 +158,5 @@ export NVM_DIR="$HOME/.nvm"
 # Added by `rbenv init` on Sat Mar 22 04:40:38 PM CST 2025
 eval "$(~/.rbenv/bin/rbenv init - --no-rehash bash)"
 . "$HOME/.cargo/env"
+
 source /home/ercntreras/alacritty/extra/completions/alacritty.bash

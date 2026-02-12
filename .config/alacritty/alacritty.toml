@@ -1,4 +1,5 @@
 [general]
+working_directory = "/home/ercntreras"
 live_config_reload = true
 
 [window]

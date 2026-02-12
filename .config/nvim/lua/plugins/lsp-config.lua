@@ -29,9 +29,13 @@ return {
       vim.lsp.enable("lua_ls")
       vim.lsp.enable("ruby_lsp")
       vim.lsp.enable("ts_ls")
-      vim.lsp.enable("clangd")
       vim.lsp.enable("html")
       vim.lsp.enable("pyright")
+      vim.lsp.enable("clangd", {
+        init_options = {
+          fallbackFlags = { "-std=c99" },
+        },
+      })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
