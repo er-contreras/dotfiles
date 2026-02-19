@@ -1,5 +1,5 @@
 vim.opt.clipboard:append("unnamedplus")
-vim.cmd("syntax off")
+-- vim.cmd("syntax on")
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
@@ -15,22 +15,22 @@ vim.cmd("set encoding=UTF-8")
 
 -- Revert to classic Vim color palette
 vim.cmd("colorscheme retrobox")
-vim.o.background = "dark"
+-- vim.o.background = "dark"
 -- Disable TrueColor if you want the terminal to handle the 'dimming'
 -- This often makes the colors look exactly like the first photo
 -- vim.opt.termguicolors = false
 
 -- Transparency Settings
-local highlight_groups = {
-  "Normal",
-  "NormalNC",
-  "LineNr",
-  "SignColumn",
-  "StatusLine",
-  "StatusLineNC",
-  "EndOfBuffer",
-}
-
-for _, group in ipairs(highlight_groups) do
-  vim.api.nvim_set_hl(0, group, { bg = "none" })
-end
+-- local highlight_groups = {
+--   "Normal",
+--   "NormalNC",
+--   "LineNr",
+--   "SignColumn",
+--   "StatusLine",
+--   "StatusLineNC",
+--   "EndOfBuffer",
+-- }
+-- 
+-- for _, group in ipairs(highlight_groups) do
+--   vim.api.nvim_set_hl(0, group, { bg = "none" })
+-- end

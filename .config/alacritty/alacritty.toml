@@ -4,8 +4,8 @@ live_config_reload = true
 
 [window]
 padding = { x = 2, y = 2 }
-opacity = 0.95
-blur = true
+#opacity = 0.99
+#blur = true
 title = "Alacritty"
 
 [env]
@@ -20,7 +20,7 @@ blink_timeout = 0
 size = 8
 
 [colors.primary]
-background = '#1a1b26'
+#background = '#1a1b26'
 #foreground = '#a9b1d6'
 
 [colors.normal]
