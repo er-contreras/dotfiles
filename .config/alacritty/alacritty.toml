@@ -3,7 +3,7 @@ working_directory = "/home/ercntreras"
 live_config_reload = true
 
 [window]
-padding = { x = 2, y = 2 }
+padding = { x = 0, y = 0 }
 opacity = 0.95
 #blur = true
 title = "Alacritty"

@@ -15,6 +15,14 @@ vim.cmd("set encoding=UTF-8")
 
 -- Revert to classic Vim color palette
 vim.cmd("colorscheme retrobox")
+
+-- Customize specific colors
+local hl = vim.api.nvim_set_hl
+-- Change Function colors
+hl(0, "Function", { fg = "#ebdbb2", bold = true })
+-- Change Directory colors
+hl(0, "Directory", { fg = "#458588", bold = true })
+
 -- vim.o.background = "dark"
 -- Disable TrueColor if you want the terminal to handle the 'dimming'
 -- This often makes the colors look exactly like the first photo
