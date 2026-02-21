@@ -1,5 +1,5 @@
 vim.opt.clipboard:append("unnamedplus")
--- vim.cmd("syntax off")
+vim.cmd("syntax off")
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
@@ -19,13 +19,15 @@ vim.opt.termguicolors = false
 -- Customize specific colors
 local hl = vim.api.nvim_set_hl
 
-hl(0, "Identifier", { fg = "#ffffff", bold = false })
-hl(0, "Operator", { fg = "#ffffff", bold = false })
-hl(0, "Delimiter", { fg = "#ffffff", bold = false })
-hl(0, "Special", { ctermfg = 2, bold = false })
-hl(0, "LineNr", { ctermfg = 8, bold = false })
-hl(0, "Character", { ctermfg = 5, bold = false })
-hl(0, "SpecialChar", { ctermfg = 5, bold = false })
+hl(0, "Identifier", { ctermfg = 7 })
+hl(0, "Operator", { ctermfg = 7 })
+hl(0, "Delimiter", { ctermfg = 7 })
+hl(0, "Special", { ctermfg = 2 })
+hl(0, "LineNr", { ctermfg = 8 })
+hl(0, "Character", { ctermfg = 5 })
+hl(0, "SpecialChar", { ctermfg = 5 })
+hl(0, "MatchParen", { ctermbg = 8 })
+hl(0, "Pmenu", { ctermbg = 0, ctermfg = 7 })
 
 -- Transparency Settings
 hl(0, "SignColumn", { bg = "none" })
