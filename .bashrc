@@ -84,11 +84,11 @@ reset=$(tput setaf sgr0); # Turn off all attributes
 # PS1+="\[${white}\] at ";
 # PS1+="\[${red}\]\h"; # host
 PS1="\[${gray}\]\t";
-PS1+="\[${white}\] ⚙️ ";
+PS1+="\[${red}\] ⚙️ ";
 PS1+="\[${green}\]\w"; # working directory
 PS1+="\[${purple}\]\$(get_git_branch)";
 PS1+="\n";
-PS1+="\[${white}\] ··> ";
+PS1+="\[${white}\]··> ";
 export PS1;
 
 else
