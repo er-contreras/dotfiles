@@ -76,6 +76,7 @@ green=$(tput setaf 71);
 white=$(tput setaf 15);
 purple=$(tput setaf 62);
 gray=$(tput setaf 238);
+cyan=$(tput setaf 81);
 bold=$(tput setaf bold);
 reset=$(tput setaf sgr0); # Turn off all attributes
 
@@ -83,10 +84,10 @@ reset=$(tput setaf sgr0); # Turn off all attributes
 # PS1+="\[${blue}\]\u"; # username
 # PS1+="\[${white}\] at ";
 # PS1+="\[${red}\]\h"; # host
-PS1="\[${gray}\]\t";
+PS1="\[${white}\]\t";
 PS1+="\[${red}\] ⚙️ ";
-PS1+="\[${green}\]\w"; # working directory
-PS1+="\[${purple}\]\$(get_git_branch)";
+PS1+="\[${white}\]\w"; # working directory
+PS1+="\[${white}\]\$(get_git_branch)";
 PS1+="\n";
 PS1+="\[${white}\]··> ";
 export PS1;

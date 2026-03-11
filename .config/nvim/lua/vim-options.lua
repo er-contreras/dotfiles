@@ -12,7 +12,7 @@ vim.cmd("set encoding=UTF-8")
 vim.diagnostic.config({ virtual_text = true })
 
 -- Revert to classic Vim color palette
-vim.cmd("colorscheme quiet")
+-- vim.cmd("colorscheme quiet")
 -- vim.o.background = "dark"
 -- vim.opt.termguicolors = false
 
@@ -25,8 +25,8 @@ vim.cmd("colorscheme quiet")
 -- })
 
 -- -- Customize specific colors
-local hl = vim.api.nvim_set_hl
--- 
+-- local hl = vim.api.nvim_set_hl
+
 -- hl(0, "Identifier", { ctermfg = 7 })
 -- hl(0, "Operator", { ctermfg = 7 })
 -- hl(0, "Delimiter", { ctermfg = 7 })
@@ -36,7 +36,7 @@ local hl = vim.api.nvim_set_hl
 -- hl(0, "SpecialChar", { ctermfg = 5 })
 -- hl(0, "MatchParen", { ctermbg = 1 })
 -- hl(0, "Pmenu", { ctermbg = 0, ctermfg = 2 })
--- 
+
 -- -- Transparency Settings
 -- hl(0, "SignColumn", { bg = "none" })
-hl(0, "Normal", { bg = "none" })
+-- hl(0, "Normal", { bg = "none", ctermbg = "none" })
