@@ -22,7 +22,6 @@ return {
       })
     end,
   },
-
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -33,7 +32,7 @@ return {
       vim.lsp.enable("pyright")
       vim.lsp.enable("clangd", {
         init_options = {
-          fallbackFlags = { "-std=c99" },
+          fallbackFlags = { "-std=c89" },
         },
       })
 

@@ -75,13 +75,15 @@ red=$(tput setaf 124);
 green=$(tput setaf 71);
 white=$(tput setaf 15);
 purple=$(tput setaf 62);
+gray=$(tput setaf 238);
 bold=$(tput setaf bold);
 reset=$(tput setaf sgr0); # Turn off all attributes
 
-PS1="\[${bold}\]";
-PS1+="\[${blue}\]\u"; # username
-PS1+="\[${white}\] at ";
-PS1+="\[${red}\]\h"; # host
+# PS1="\[${bold}\]";
+# PS1+="\[${blue}\]\u"; # username
+# PS1+="\[${white}\] at ";
+# PS1+="\[${red}\]\h"; # host
+PS1="\[${gray}\]\t";
 PS1+="\[${white}\] ⚙️ ";
 PS1+="\[${green}\]\w"; # working directory
 PS1+="\[${purple}\]\$(get_git_branch)";
@@ -120,7 +122,7 @@ fi
 
 # some more ls aliases
 alias ll='ls -l'
-alias la='ls -lA'
+alias la='ls -la'
 alias l='ls -CF'
 alias ssp='systemctl suspend'
 alias srb='systemctl reboot'
